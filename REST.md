@@ -22,11 +22,11 @@ The ability to send executable code to a client to extend its functionality is a
 ### Uniform Interface
 This is the main constraint of REST and separates the web service to allow for a request response to be developed independently from others.
 
-####Resource identification in requests
+#### Resource identification in requests
 This means that the resource returned from a request is defined by the request itself, letting the server handle its data separately from what it returns, only concerned with returning the correct information based on the request.
 
-####Resource manipulation through representations
+#### Resource manipulation through representations
 A client gets enough information from a request that it can manipulate the data on its end(update, delete).
 
-####Hyperlink connectivity web
+#### Hyperlink connectivity web
 A client should be able to navigate a website using the hyperlinks sent to it from the server, and should have access to all pages intended for a client once it has gotten to a page on the website.
