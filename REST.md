@@ -3,7 +3,7 @@ Despite the intimidating acronym representing this concept, it is not as difficu
 
 an example of a page being hosted on the root route "/", returning "Hello World" when requested:
 
-```
+```python
 from flask import Flask
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ This follows the Software Engineering principle of separation of concern, which 
 
 An example of a webserver, this returns html for the client to render when the base route "/" is accessed:
 
-```
+```python
 @bp.route('/')
 def index():
     """Show all the posts, most recent first."""
@@ -40,7 +40,7 @@ Statelessness means that no state information is held on the server side, only s
 ### Cacheability
 REST web services must use caches when appropriate. Defining responses from a server as cacheable or not correctly can prevent clients from getting out of date or incorrect data, while also eliminating some interactions with the server side, as the data will already be on the client. This not only improves performance, but also takes away some dependance on a server. Here is an example of one way to cache in Python, using the shelve module linked to at the end of this chapter.
 
-```
+```python
 import shelve
 
 d = shelve.open(filename)  # open -- file may get suffix added by low-level
@@ -72,8 +72,10 @@ A client gets enough information from a request that it can manipulate the data 
 #### Hyperlink connectivity web
 A client should be able to navigate a website using the hyperlinks sent to it from the server, and should have access to all pages intended for a client once it has gotten to a page on the website.
 
+# CRUD
+
 # References
 
-https://docs.python.org/3/library/shelve.html
-https://github.com/pallets/flask/tree/1.0.2/examples/tutorial
-http://flask.pocoo.org/
+- <https://docs.python.org/3/library/shelve.html>
+- <https://github.com/pallets/flask/tree/1.0.2/examples/tutorial>
+- <http://flask.pocoo.org/>
