@@ -73,6 +73,15 @@ A client gets enough information from a request that it can manipulate the data 
 A client should be able to navigate a website using the hyperlinks sent to it from the server, and should have access to all pages intended for a client once it has gotten to a page on the website.
 
 # CRUD
+A minor concept that goes along with REST is CRUD, which stands for create, read, update, and delete. These are the four functions needed for a persistent database, it must be able to create data, read its values, update those same values, and delete whatever data that may need to be deleted.
+
+## CRUD and REST
+CRUD relates to REST in the way that HTTP requests, which are the main way clients communicate with a server, can all fit into one of the CRUD functions.
+
+-Create corresponds to POST requests, which are used to send data along with the request, typically to create something.
+-Read corresponds to GET requests, which do not send info along, they simply request a URL for data, very much like a reading of data.
+-Update corresponds to PUT requests, which send data along with the purpose of using it for updating existing data.
+-Delete corresponds to DELETE requests, which are simple requests sending enough data to target something to delete.
 
 # References
 
