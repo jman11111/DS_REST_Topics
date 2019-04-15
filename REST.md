@@ -55,7 +55,7 @@ data = d[key]              # retrieve a COPY of data at key (raise KeyError
 It is a simple key value cache but it can save time when something stored on a database doesnt change often but is accessed frequently, a listener can be used to detect when this change happens and can then update the cache, making it effective once again.
 
 ### Layered System
-A client should not be able to tell if it is connected to an end server or a middle man, and using an intermediate manager can add security and other features before it talks to the server.
+A client should not be able to tell if it is connected to an end server or a middle man, and using an intermediate manager can add security and other features before it talks to the server. This requires that the client and server be very distinct, or in this case the interface and data access layer, because the data access layer can be comprised of more that a server.
 
 ### Client Side Scripts/Code
 The ability to send executable code to a client to extend its functionality is also a requirement of REST.
@@ -78,10 +78,10 @@ A minor concept that goes along with REST is CRUD, which stands for create, read
 ## CRUD and REST
 CRUD relates to REST in the way that HTTP requests, which are the main way clients communicate with a server, can all fit into one of the CRUD functions.
 
--Create corresponds to POST requests, which are used to send data along with the request, typically to create something.
--Read corresponds to GET requests, which do not send info along, they simply request a URL for data, very much like a reading of data.
--Update corresponds to PUT requests, which send data along with the purpose of using it for updating existing data.
--Delete corresponds to DELETE requests, which are simple requests sending enough data to target something to delete.
+- Create corresponds to POST requests, which are used to send data along with the request, typically to create something.
+- Read corresponds to GET requests, which do not send info along, they simply request a URL for data, very much like a reading of data.
+- Update corresponds to PUT requests, which send data along with the purpose of using it for updating existing data.
+- Delete corresponds to DELETE requests, which are simple requests sending enough data to target something to delete.
 
 # References
 
