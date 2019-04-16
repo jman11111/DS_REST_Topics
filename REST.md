@@ -12,6 +12,14 @@ def hello():
     return "Hello World!"
 ```
 
+On the subject of routes and routing, builing routes in an organized way is important as well, for instance if you have a login page, youll want the route to be something like "mywebsite/login" with "/login" being the route. Here are some tips for building a good URL:
+
+- Make it human readable, use words that people will understand and that make sense to you.
+- Make the routes distinct, this will reduce confusion as to what page is where.
+- Plan it our before hand, this is good advice for many things, but especially here where a website can have many pages.
+- Dont use too many dynamic URLs, such as a code for a specific users info when it is not necessary, these can be mandatory, but when they are not try to avoid it.
+- Use underscores and in general keep routes short, the longer the routes get the harder they are to read, and use underscores to separate words.
+
 ## REST Style
 In order for a web service to be considered RESTful, it must follow 6 constraints:
 
@@ -73,7 +81,7 @@ A client gets enough information from a request that it can manipulate the data 
 A client should be able to navigate a website using the hyperlinks sent to it from the server, and should have access to all pages intended for a client once it has gotten to a page on the website.
 
 # CRUD
-A minor concept that goes along with REST is CRUD, which stands for create, read, update, and delete. These are the four functions needed for a persistent database, it must be able to create data, read its values, update those same values, and delete whatever data that may need to be deleted.
+A concept that goes along with REST is CRUD, which stands for create, read, update, and delete. These are the four functions needed for a persistent database, it must be able to create data, read its values, update those same values, and delete whatever data that may need to be deleted.
 
 ## CRUD and REST
 CRUD relates to REST in the way that HTTP requests, which are the main way clients communicate with a server, can all fit into one of the CRUD functions.
@@ -83,8 +91,34 @@ CRUD relates to REST in the way that HTTP requests, which are the main way clien
 - Update corresponds to PUT requests, which send data along with the purpose of using it for updating existing data.
 - Delete corresponds to DELETE requests, which are simple requests sending enough data to target something to delete.
 
+# HTTP
+HTTP requests are the main way to communicate with a website, and they are composed of a few parts.
+
+## Headers
+Headers allow the client and the server to pass additional information with the request or the response, and are generally used for authentication or sending info for the server to use.
+
+An example of an HTTP request sent using CURL with a header:
+```
+curl --header "Username: Jorgen233" www.google.com
+```
+
+## Payload
+Payload is the actual data of the request when a POST request is sent, it can be in different formats but it is always necessary data.
+
+An example of a payload for a request in javascript:
+
+```javascript
+POST /some-path HTTP/1.1
+Content-Type: application/json
+
+{ "firstname" : "Jack", "lastname" : "Broncato" }
+```
+
+The payload is formatted in a JSON file format, with the two fields firstname and lastname, both conatinaing their values
+
 # References
 
 - <https://docs.python.org/3/library/shelve.html>
 - <https://github.com/pallets/flask/tree/1.0.2/examples/tutorial>
 - <http://flask.pocoo.org/>
+- <https://tools.ietf.org/html/draft-ietf-httpbis-p3-payload-14#section-3.2>
