@@ -118,7 +118,7 @@ The payload is formatted in a JSON file format, with the two fields firstname an
 
 # References
 
-- <https://docs.python.org/3/library/shelve.html>
-- <https://github.com/pallets/flask/tree/1.0.2/examples/tutorial>
-- <http://flask.pocoo.org/>
-- <https://tools.ietf.org/html/draft-ietf-httpbis-p3-payload-14#section-3.2>
+- 1. Pallets, Davidism. “Pallets/Flask.” GitHub, Github, 13 Apr. 2018, github.com/pallets/flask/tree/1.0.2/examples/tutorial.
+- 2. Reschke, Julian F. “HTTP/1.1, Part 3: Message Payload and Content Negotiation.” IETF Tools, 2011, tools.ietf.org/html/draft-ietf-httpbis-p3-payload-14#section-3.2.
+- 3. Ronacher, Armin. “Welcome.” Welcome | Flask (A Python Microframework), Flask, 2019, flask.pocoo.org/.
+- 4. “Shelve - Python Object Persistence¶.” Shelve - Python Object Persistence - Python 3.7.3 Documentation, 17 Apr. 2019, docs.python.org/3/library/shelve.html.
